@@ -15,16 +15,25 @@ elif size == "L":
     price += 25
 
 else:
-    print("Sorry we only serve Small, Medium and Large.")
+    print("Sorry we only serve Small, Medium and Large pizzas.")
+    exit()
 
-if (size == "M" or size == "L") and pepperoni == "Y":
-    price += 3
+
+if pepperoni == "Y":
+    if size == "M" or size == "L":
+        price += 3
 elif pepperoni == "N":
     pass
 else:
-    print("Please choose Yes or No")
+    print("Please choose Yes or No for Pepperoni")
+    exit()
 
 if extra_cheese == "Y":
     price += 1
+elif extra_cheese == "N":
+    pass
+else:
+    print("Please choose Yes or No for extra cheese")
+    exit()
 
 print(f"Your final bill is: ${price}.")
